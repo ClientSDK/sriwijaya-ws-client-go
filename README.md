@@ -1,2 +1,2 @@
 # sriwijaya-ws-client-go
-Sriwijaya Web Service Client (Go)
+Sriwijaya Web Service (SOAP) Client (Go)
