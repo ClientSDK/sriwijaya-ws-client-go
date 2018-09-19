@@ -1,8 +1,8 @@
-# WsSearchFlight: Search Flight Method
+# WsCancelPNR: ... Method
 
-Search Flight Method (WsSearchFlight) is a service method to search flight schedule information from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
+... (Ws...) is a service method to ... from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
 
-> In this example you will learn about using  Search Flight Method (WsSearchFlight) with Go (sjwsdk111 package). 
+> In this example you will learn about using  ... Method (Ws...) with Go (sjwsdk111 package). 
 
 The following are the sections available in this guide.
 
@@ -12,9 +12,9 @@ The following are the sections available in this guide.
 - [Build and Running](#build-and-running)
 
 ## What you’ll build
-Let’s make a real world simple application for online search flight schedule using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the Search Flight use case.
+Let’s make a real world simple application for ... using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the ... use case.
 
-![Search Flight Diagram](images/01.WsSearchFlight.png "Search Flight Diagram")
+![... Diagram](images/05.WsCancelPNR.png "... Diagram")
 
 
 ## Prerequisites
@@ -43,7 +43,7 @@ Go is a complete programming language that supports custom project structures. L
 ```
 sjwsv111
     ├── by-features
-    │   ├── 01.WsSearchFlight
+    │   ├── 01.Ws...
     │   │   ├── README.md
     │   │   ├── build_and_run.sh
     │   │   └── main.go
@@ -58,9 +58,9 @@ sjwsv111
 
 ### Developing the application
 
-Let's make a simple application for searching flight schedule information using `sjwsdk111` package. 
+Let's make a simple application for ... using `sjwsdk111` package. 
 
-##### Main code for WsSearchFlight (main.go)
+##### Main code for Ws... (main.go)
 ```go
 package main
 
@@ -88,26 +88,18 @@ func main() {
 		fmt.Println(err)
 	}
 
-	callWsSearchFlight(sjClient)
+	callWs...(sjClient)
 }
 
-// callWsSearchFlight is a function to call WsSearchFlight method
-func callWsSearchFlight(s *sjwsdk111.SoapSJClient) {
+// callWs... is a function to call Ws... method
+func callWs...(s *sjwsdk111.SoapSJClient) {
 	params := []byte(
 		`
 			<Username xsi:type="xsd:string">SRIWIJAWA_AGENT_USERNAME</Username>
 			<Password xsi:type="xsd:string">SRIWIJAWA_AGENT_PASSWORD</Password>
-			<ReturnStatus xsi:type="xsd:string">YES</ReturnStatus>
-			<CityFrom xsi:type="xsd:string">CGK</CityFrom>
-			<CityTo xsi:type="xsd:string">DPS</CityTo>
-			<DepartDate xsi:type="xsd:string">01-Feb-19</DepartDate>
-			<ReturnDate xsi:type="xsd:string">13-Feb-19</ReturnDate>
-			<PromoCode xsi:type="xsd:string"></PromoCode>
-			<Adult xsi:type="xsd:string">1</Adult>
-			<Child xsi:type="xsd:string">1</Child>
-			<Infant xsi:type="xsd:string">1</Infant>
+			...
 			`)
-	wsResp, errC := s.CallWsSearchFlight(params, false)
+	wsResp, errC := s.CallWs...(params, false)
 
 	if errC != nil {
 		fmt.Println(errC)
@@ -116,7 +108,7 @@ func callWsSearchFlight(s *sjwsdk111.SoapSJClient) {
 
 	// Access response variable
 	// fmt.Println()
-	// fmt.Println("ReturnData-WsSearchFlight:")
+	// fmt.Println("ReturnData-Ws...:")
 	// fmt.Printf("%#v\n", wsResp.Return)
     
 	// Marshal response variable to XML
@@ -129,12 +121,12 @@ func callWsSearchFlight(s *sjwsdk111.SoapSJClient) {
 ##### Bash code for build and running the example (build_and_run.sh)
 ```bash
 echo "Clean..."
-rm ./WsSearchFlight
+rm ./Ws...
 echo "Build..."
-go build -o WsSearchFlight main.go 
+go build -o Ws... main.go 
 echo "Build Done..."
 echo "Run..."
-./WsSearchFlight > WsSearchFlight-Result.xml
+./Ws... > Ws...-Result.xml
 echo "Done."
 
 ```
@@ -148,4 +140,4 @@ You can build and running by execute the "build_and_run.sh" bash files.
    $ sh build_and_run.sh 
 ```
 
-After the application is running, you will get the xml response in `WsSearchFlight-Result.xml` files.
+After the application is running, you will get the xml response in `Ws...-Result.xml` files.
