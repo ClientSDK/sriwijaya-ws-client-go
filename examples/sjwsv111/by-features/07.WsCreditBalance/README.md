@@ -19,7 +19,7 @@ Let’s make a real world simple application for ... using Sriwijaya Air Web Ser
 
 ## Prerequisites
 
-- [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111)
+- [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go)
 
 ```Go
 go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111

@@ -29,7 +29,7 @@ go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsv111
 
 ## Prerequisites
 
-- [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111)
+- [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go)
 
 ```Go
 go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
