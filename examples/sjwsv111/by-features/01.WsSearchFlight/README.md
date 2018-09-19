@@ -19,7 +19,7 @@ Let’s make a real world simple application for online search flight schedule u
 
 ## Prerequisites
 
-- [Sriwijaya Air Web Service (SOAP) Client (sjwsdk111 GoLang package) ](github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111)
+- [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111)
 
 ```Go
 go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111

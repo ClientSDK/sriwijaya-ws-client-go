@@ -27,6 +27,22 @@
 go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsv111
 ```
 
+## Prerequisites
+
+- [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111)
+
+```Go
+go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
+```
+
+- A Text Editor or an IDE
+
+### Sriwijaya Air Agent requirements
+- Sriwijaya Air Agent Credential Account ([Agent Application](https://agent.sriwijayaair.co.id/SJ-Eticket/login.php?action=in))
+- Sriwijaya Air Web Service Access (IP Whitelist) ( [Production](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php), [Development](https://wsx.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php) )
+- WSDL File ( [Production](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php?wsdl), [Development](https://wsx.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php?wsdl) )
+
+
 ## Example
 
 ##### Sriwijaya Air Webservice Version 111
