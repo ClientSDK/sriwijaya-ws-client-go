@@ -1,4 +1,4 @@
-# Ws...: ... Method
+# WsGeneratePNR: ... Method
 
 ... (Ws...) is a service method to ... from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
 
