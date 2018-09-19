@@ -96,5 +96,5 @@ go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
 
 ### Credit
 
-- [SOAP Package for Go](github.com/tiaguinho/gosoap/)
-- [Go library for accessing Github API](github.com/google/go-github)
+- [SOAP Package for Go](https://github.com/tiaguinho/gosoap/)
+- [Go library for accessing Github API](https://github.com/google/go-github)
