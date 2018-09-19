@@ -52,7 +52,7 @@ func callWsSearchFlight(s *sjwsdk111.SoapSJClient) {
 
 	fmt.Println()
 	fmt.Println("ReturnData-WsSearchFlight:")
-	fmt.Printf("%#v\n", WsCreditBalance.Return)
+	fmt.Printf("%#v\n", wsResp.Return)
 
 	myXML, _ := xml.MarshalIndent(wsResp, " ", "  ")
 	fmt.Println(string(myXML))
