@@ -124,7 +124,7 @@ func (c *SoapSJClient) Call(method string, params []byte, debug bool) (err error
 	return err
 }
 
-// CallWsSearchFlight is a function to call WsCreditBalance Method
+// CallWsSearchFlight is a function to call WsSearchFlight Method
 func (c *SoapSJClient) CallWsSearchFlight(params []byte, debug bool) (*WsSearchFlightResponse, error) {
 	err := c.Call("WsSearchFlight", params, debug)
 	if err != nil {

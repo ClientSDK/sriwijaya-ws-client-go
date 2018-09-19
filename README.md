@@ -1,5 +1,20 @@
-# sriwijaya-ws-client-go
-Sriwijaya Air Web Service (SOAP) Client (Go)
+# Sriwijaya Air Web Service (SOAP) Client Go [![GoDoc](https://godoc.org/github.com/ClientSDK/sriwijaya-ws-client-go?status.png)](https://godoc.org/github.com/ClientSDK/sriwijaya-ws-client-go) [![Go Report Card](https://goreportcard.com/badge/github.com/ClientSDK/sriwijaya-ws-client-go)](https://goreportcard.com/report/github.com/ClientSDK/sriwijaya-ws-client-go) 
+
+Go Package to help with Sriwijaya Air Web Service (SOAP) Client
+
+## Install
+
+##### Sriwijaya Air Webservice Version 111
+
+```bash
+go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsv111
+```
+
+## Example
+
+##### Sriwijaya Air Webservice Version 111
+- [Example By Feature](examples/sjwsv111/by-features/README.md)
+- [Example By Scenario]
 
 ### Repository Structure
 ```
@@ -44,3 +59,9 @@ Sriwijaya Air Web Service (SOAP) Client (Go)
         ├── sjwsdk111.go
         └── wsdl.go
 ```
+
+
+### Credit
+
+- [SOAP Package for Go](github.com/tiaguinho/gosoap/)
+- [Go library for accessing Github API](github.com/google/go-github)
