@@ -1,6 +1,23 @@
 # Sriwijaya Air Web Service (SOAP) Client for Go [![GoDoc](https://godoc.org/github.com/ClientSDK/sriwijaya-ws-client-go?status.png)](https://godoc.org/github.com/ClientSDK/sriwijaya-ws-client-go) [![Go Report Card](https://goreportcard.com/badge/github.com/ClientSDK/sriwijaya-ws-client-go)](https://goreportcard.com/report/github.com/ClientSDK/sriwijaya-ws-client-go) 
 
-Go Package to help with Sriwijaya Air Web Service (SOAP) Client
+
+<p align="center">
+  <a href="https://github.com/ClientSDK/sriwijaya-ws-client-go">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/LOGO_SJ_VERTIKAL.png/320px-LOGO_SJ_VERTIKAL.png" alt="ClientSDK Swirijaya Air WS Client Go" width=300>
+  </a>
+
+  <h3 align="center">UnOfficial Go Package SOAP Client library for Sriwijaya Air Web Service (SOAP)</h3>
+
+  <p align="center">
+    Author:
+    <br>
+    <a href="https://github.com/ClientSDK"><strong>ClientSDK Team »</strong></a>
+    <br>
+    <br>
+    <a href="https://github.com/ClientSDK/sriwijaya-ws-client-go/issues">Report issues</a>
+  </p>
+</p>
+
 
 ## Install
 
