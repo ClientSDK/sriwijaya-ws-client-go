@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for online search flight schedule using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the Search Flight use case.
 
-![Search Flight Diagram](images/WsSearchFlight.jpeg "Search Flight Diagram")
+![Search Flight Diagram](images/01.WsSearchFlight.png "Search Flight Diagram")
 
 
 ## Prerequisites
@@ -58,9 +58,7 @@ sjwsv111
 
 ### Developing the application
 
-Let's implement the set of downstream services first.  
-
-Appointment Management Service (appointment_mgt_service) is a REST API developed to manage health appointments for the members. For demonstration purpose it has a in-memory map to hold appointment data. It has capability to add appointments and retrieve appointments. 
+Let's make a simple application for searching flight schedule information using `sjwsdk111` package. 
 
 ##### Main code for WsSearchFlight (main.go)
 ```go
