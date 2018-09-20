@@ -141,3 +141,126 @@ You can build and running by execute the "build_and_run.sh" bash files.
 ```
 
 After the application is running, you will get the xml response in `WsIssuing-Result.xml` files.
+
+## Sample Response
+
+```xml
+ <WsIssuingResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <BookingCode>ABMNYZ</BookingCode>
+     <YourItineraryDetails>
+       <ReservationDetails>
+         <BookingCode>ABMNYZ</BookingCode>
+         <BookingDate>18 Sep 2018 08:01 (GMT+7)</BookingDate>
+         <BalanceDue>0</BalanceDue>
+         <BalanceDueRemarks>*Extra Cover Insurance (STI) not include in balance due.</BalanceDueRemarks>
+         <CurrencyCode>IDR</CurrencyCode>
+         <Time>18 Sep 2018 18:18 (GMT+7)</Time>
+         <TimeDescription>DateOfIssue</TimeDescription>
+         <Status>Confirm</Status>
+       </ReservationDetails>
+       <PassengerDetails>
+         <item>
+           <No>1</No>
+           <Suffix>Mrs</Suffix>
+           <FirstName>ANGKASA</FirstName>
+           <LastName>SRIWIJAYA</LastName>
+           <SeatQty>1</SeatQty>
+           <TicketNumber>977012345678901C1, C2</TicketNumber>
+           <SpecialRequest>N/A</SpecialRequest>
+         </item>
+         <item>
+           <No>2</No>
+           <Suffix>Mstr</Suffix>
+           <FirstName>MAS</FirstName>
+           <LastName>SRIWIJAYA</LastName>
+           <SeatQty>1</SeatQty>
+           <TicketNumber>977012345678902C1, C2</TicketNumber>
+           <SpecialRequest>N/A</SpecialRequest>
+         </item>
+         <item>
+           <No>3</No>
+           <Suffix>Inf</Suffix>
+           <FirstName>ANANDA</FirstName>
+           <LastName>SRIWIJAYA</LastName>
+           <SeatQty>0</SeatQty>
+           <TicketNumber>977012345678903C1, C2</TicketNumber>
+           <SpecialRequest>N/A</SpecialRequest>
+         </item>
+       </PassengerDetails>
+       <ItineraryDetails>
+         <Journey>
+           <item>
+             <Segment>
+               <item>
+                 <FlownDate>18-SEP-18</FlownDate>
+                 <FlightNo>SJ097</FlightNo>
+                 <CityFrom>TKG</CityFrom>
+                 <CityTo>CGK</CityTo>
+                 <CityFromName>Lampung</CityFromName>
+                 <CityToName>Jakarta</CityToName>
+                 <StdLT>12:40 LT</StdLT>
+                 <StaLT>13:25 LT</StaLT>
+                 <ReservationStatus>RR</ReservationStatus>
+                 <Class>L</Class>
+                 <CheckInStatus>NO</CheckInStatus>
+               </item>
+             </Segment>
+           </item>
+           <item>
+             <Segment>
+               <item>
+                 <FlownDate>28-SEP-18</FlownDate>
+                 <FlightNo>SJ096</FlightNo>
+                 <CityFrom>CGK</CityFrom>
+                 <CityTo>TKG</CityTo>
+                 <CityFromName>Jakarta</CityFromName>
+                 <CityToName>Lampung</CityToName>
+                 <StdLT>11:25 LT</StdLT>
+                 <StaLT>12:05 LT</StaLT>
+                 <ReservationStatus>RR</ReservationStatus>
+                 <Class>Q</Class>
+                 <CheckInStatus>NO</CheckInStatus>
+               </item>
+             </Segment>
+           </item>
+         </Journey>
+       </ItineraryDetails>
+       <PaymentDetails>
+         <BasicFare>1500000</BasicFare>
+         <Others>525000</Others>
+         <Sti></Sti>
+         <Total>2025000</Total>
+         <Nta>1881900</Nta>
+         <CurrencyCode>IDR</CurrencyCode>
+       </PaymentDetails>
+       <ContactList>
+         <item>
+           <Type>Phone</Type>
+           <Description>Main</Description>
+           <Value>081234987650</Value>
+         </item>
+         <item>
+           <Type>Phone</Type>
+           <Description>Main</Description>
+           <Value>02740123456</Value>
+         </item>
+         <item>
+           <Type>Email</Type>
+           <Description>Work</Description>
+           <Value>angkasa.sriwijaya@gmail.com</Value>
+         </item>
+       </ContactList>
+       <AgentDetails>
+         <BookedBy>SRIWIJAWA_AGENT_USERNAME</BookedBy>
+         <IssuedBy>SRIWIJAWA_AGENT_USERNAME_ISSUED</IssuedBy>
+       </AgentDetails>
+       <BookingRemarks></BookingRemarks>
+       <AdditionalInformation></AdditionalInformation>
+     </YourItineraryDetails>
+     <ErrorCode>RETRIEVE0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsIssuingResponse>
+```
