@@ -184,7 +184,7 @@ After the application is running, you will get the xml response in `WsRetrievePN
            <Suffix>Inf</Suffix>
            <FirstName>ANANDA</FirstName>
            <LastName>SRIWIJAYA</LastName>
-           <SeatQty>1</SeatQty>
+           <SeatQty>0</SeatQty>
            <TicketNumber>977012345678903C1, C2</TicketNumber>
            <SpecialRequest>N/A</SpecialRequest>
          </item>
