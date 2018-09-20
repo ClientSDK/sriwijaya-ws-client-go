@@ -43,7 +43,7 @@ Go is a complete programming language that supports custom project structures. L
 ```
 sjwsv111
     ├── by-features
-    │   ├── 01.Ws...
+    │   ├── 01.WsGeneratePNR
     │   │   ├── README.md
     │   │   ├── build_and_run.sh
     │   │   └── main.go
@@ -149,7 +149,7 @@ func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 				</item>
 			</Keys>
 			`)
-	wsResp, errC := s.callWsGeneratePNR(params, false)
+	wsResp, errC := s.CallWsGeneratePNR(params, false)
 
 	if errC != nil {
 		fmt.Println(errC)

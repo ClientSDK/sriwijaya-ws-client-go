@@ -38,7 +38,7 @@ func callWsIssuing(s *sjwsdk111.SoapSJClient) {
 		`
 			<Username xsi:type="xsd:string">SRIWIJAWA_AGENT_USERNAME</Username>
 			<Password xsi:type="xsd:string">SRIWIJAWA_AGENT_PASSWORD</Password>
-			...To Do...
+			<BookingCode xsi:type="xsd:string">ACTIVE_PNR_CODE_OR_BOOKING_CODE_FROM_WS_GENERATE_PNR_RESPONSE</BookingCode>
 			`)
 	wsResp, errC := s.CallWsIssuing(params, false)
 
