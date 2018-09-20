@@ -1,8 +1,8 @@
-# WsCreditBalance: ... Method
+# WsCreditBalance: Credit Balance Method
 
-... (Ws...) is a service method to ... from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
+Credit Balance (WsCreditBalance) is a service method to retrieve credit balance information from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
 
-> In this example you will learn about using  ... Method (Ws...) with Go (sjwsdk111 package). 
+> In this example you will learn about using  Credit Balance Method (WsCreditBalance) with Go (using sjwsdk111 package). 
 
 The following are the sections available in this guide.
 
@@ -12,9 +12,9 @@ The following are the sections available in this guide.
 - [Build and Running](#build-and-running)
 
 ## What you’ll build
-Let’s make a real world simple application for ... using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the ... use case.
+Let’s make a real world simple application for retrieving credit balance information using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the credit balance use case.
 
-![... Diagram](images/07.WsCreditBalance.png "... Diagram")
+![Credit Balance Diagram](images/07.WsCreditBalance.png "Credit Balance Diagram")
 
 
 ## Prerequisites
@@ -43,7 +43,7 @@ Go is a complete programming language that supports custom project structures. L
 ```
 sjwsv111
     ├── by-features
-    │   ├── 01.Ws...
+    │   ├── 01.WsCreditBalance
     │   │   ├── README.md
     │   │   ├── build_and_run.sh
     │   │   └── main.go
@@ -58,9 +58,9 @@ sjwsv111
 
 ### Developing the application
 
-Let's make a simple application for ... using `sjwsdk111` package. 
+Let's make a simple application for retrieving credit balance information using `sjwsdk111` package. 
 
-##### Main code for Ws... (main.go)
+##### Main code for WsCreditBalance (main.go)
 ```go
 package main
 
@@ -88,18 +88,18 @@ func main() {
 		fmt.Println(err)
 	}
 
-	callWs...(sjClient)
+	callWsCreditBalance(sjClient)
 }
 
-// callWs... is a function to call Ws... method
-func callWs...(s *sjwsdk111.SoapSJClient) {
+// callWsCreditBalance is a function to call WsCreditBalance method
+func callWsCreditBalance(s *sjwsdk111.SoapSJClient) {
 	params := []byte(
 		`
 			<Username xsi:type="xsd:string">SRIWIJAWA_AGENT_USERNAME</Username>
 			<Password xsi:type="xsd:string">SRIWIJAWA_AGENT_PASSWORD</Password>
 			...
 			`)
-	wsResp, errC := s.CallWs...(params, false)
+	wsResp, errC := s.CallWsCreditBalance(params, false)
 
 	if errC != nil {
 		fmt.Println(errC)
@@ -108,7 +108,7 @@ func callWs...(s *sjwsdk111.SoapSJClient) {
 
 	// Access response variable
 	// fmt.Println()
-	// fmt.Println("ReturnData-Ws...:")
+	// fmt.Println("ReturnData-WsCreditBalance:")
 	// fmt.Printf("%#v\n", wsResp.Return)
     
 	// Marshal response variable to XML
@@ -118,15 +118,15 @@ func callWs...(s *sjwsdk111.SoapSJClient) {
 
 ```
 
-##### Bash code for build and running the example (build_and_run.sh)
+##### Bash code for building and running the example application (build_and_run.sh)
 ```bash
 echo "Clean..."
-rm ./Ws...
+rm ./WsCreditBalance
 echo "Build..."
-go build -o Ws... main.go 
-echo "Build Done..."
+go build -o WsCreditBalance main.go 
+echo "Build Done."
 echo "Run..."
-./Ws... > Ws...-Result.xml
+./WsCreditBalance > WsCreditBalance-Result.xml
 echo "Done."
 
 ```
@@ -140,4 +140,4 @@ You can build and running by execute the "build_and_run.sh" bash files.
    $ sh build_and_run.sh 
 ```
 
-After the application is running, you will get the xml response in `Ws...-Result.xml` files.
+After the application is running, you will get the xml response in `WsCreditBalance-Result.xml` files.
