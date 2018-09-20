@@ -1,8 +1,8 @@
-# WsGeneratePNR: ... Method
+# WsGeneratePNR: Generate PNR (Booking) Method
 
-... (Ws...) is a service method to ... from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
+Generate PNR/Booking (WsGeneratePNR) is a service method to make/generate booking (PNR) from Sriwijaya Air Web Service (SOAP) v.111 [[1](https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php)].
 
-> In this example you will learn about using  ... Method (Ws...) with Go (sjwsdk111 package). 
+> In this example you will learn about using Generate PNR/Booking Method (WsGeneratePNR) with Go (using sjwsdk111 package). 
 
 The following are the sections available in this guide.
 
@@ -12,9 +12,9 @@ The following are the sections available in this guide.
 - [Build and Running](#build-and-running)
 
 ## What you’ll build
-Let’s make a real world simple application for ... using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the ... use case.
+Let’s make a real world simple application for make a booking (PNR) by using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the booking use case.
 
-![... Diagram](images/02.WsGeneratePNR.png "... Diagram")
+![Generate PNR/Booking Diagram](images/02.WsGeneratePNR.png "Generate PNR/Booking Diagram")
 
 
 ## Prerequisites
@@ -58,9 +58,9 @@ sjwsv111
 
 ### Developing the application
 
-Let's make a simple application for ... using `sjwsdk111` package. 
+Let's make a simple application for make a booking by using `sjwsdk111` package. 
 
-##### Main code for Ws... (main.go)
+##### Main code for WsGeneratePNR (main.go)
 ```go
 package main
 
@@ -88,18 +88,68 @@ func main() {
 		fmt.Println(err)
 	}
 
-	callWs...(sjClient)
+	callWsGeneratePNR(sjClient)
 }
 
-// callWs... is a function to call Ws... method
-func callWs...(s *sjwsdk111.SoapSJClient) {
+// callWsGeneratePNR is a function to call WsGeneratePNR method
+func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 	params := []byte(
 		`
 			<Username xsi:type="xsd:string">SRIWIJAWA_AGENT_USERNAME</Username>
 			<Password xsi:type="xsd:string">SRIWIJAWA_AGENT_PASSWORD</Password>
-			...
+			<Received xsi:type="xsd:string">Angkasa Sriwijaya</Received>
+			<ReceivedPhone xsi:type="xsd:string">081234987650</ReceivedPhone>
+			<Email xsi:type="xsd:string">angkasa.sriwijaya@gmail.com</Email>
+			<SearchKey xsi:type="xsd:string">SEARCH_KEY_FROM_WS_SEARCH_FLIGHT_RESPONSE</SearchKey>
+			<ExtraCoverAddOns xsi:type="xsd:string">NO</ExtraCoverAddOns>
+			<AdultNames xsi:type="urn:AdultNamesArray" soapenc:arrayType="urn:InputReqNameArray[1]">
+				<item xsi:type="urn:InputReqNameArray">
+					<FirstName xsi:type="xsd:string">Angkasa</FirstName>
+					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
+					<Suffix xsi:type="xsd:string">MR</Suffix>
+				</item>
+			</AdultNames>
+			<ChildNames xsi:type="urn:ChildNamesArray" soapenc:arrayType="urn:InputReqNameArray[1]">
+				<item xsi:type="urn:InputReqNameArray">
+					<FirstName xsi:type="xsd:string">Mas</FirstName>
+					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
+					<Suffix xsi:type="xsd:string">MSTR</Suffix>
+					<Dob xsi:type="xsd:string">2010-10-10</Dob>
+				</item>
+			</ChildNames>
+			<InfantNames xsi:type="urn:InfantNamesArray" soapenc:arrayType="urn:InputReqArrayInf[1]">
+				<item xsi:type="urn:InputReqArrayInf">
+					<FirstName xsi:type="xsd:string">Ananda</FirstName>
+					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
+					<Suffix xsi:type="xsd:string">INF</Suffix>
+					<Dob xsi:type="xsd:string">2017-07-17</Dob>
+					<AdultRefference xsi:type="xsd:string">1</AdultRefference>
+				</item>
+			</InfantNames>
+			<Keys xsi:type="urn:InputReqArrayKey" soapenc:arrayType="urn:InputReqArrayKeys[5]">
+				<item xsi:type="urn:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_01</Key>
+					<Category xsi:type="xsd:string">Departure</Category>
+				</item>
+				<item xsi:type="urn:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_02_IF_CONNECTING</Key>
+					<Category xsi:type="xsd:string">Departure</Category>
+				</item>
+				<item xsi:type="urn:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_03_IF_CONNECTING</Key>
+					<Category xsi:type="xsd:string">Departure</Category>
+				</item>
+				<item xsi:type="tns:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_01_IF_ROUNDTRIP</Key>
+					<Category xsi:type="xsd:string">Return</Category>
+				</item>
+				<item xsi:type="tns:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_02_IF_ROUNDTRIP_CONNECTING</Key>
+					<Category xsi:type="xsd:string">Return</Category>
+				</item>
+			</Keys>
 			`)
-	wsResp, errC := s.CallWs...(params, false)
+	wsResp, errC := s.callWsGeneratePNR(params, false)
 
 	if errC != nil {
 		fmt.Println(errC)
@@ -108,7 +158,7 @@ func callWs...(s *sjwsdk111.SoapSJClient) {
 
 	// Access response variable
 	// fmt.Println()
-	// fmt.Println("ReturnData-Ws...:")
+	// fmt.Println("ReturnData-WsGeneratePNR:")
 	// fmt.Printf("%#v\n", wsResp.Return)
     
 	// Marshal response variable to XML
@@ -118,15 +168,15 @@ func callWs...(s *sjwsdk111.SoapSJClient) {
 
 ```
 
-##### Bash code for build and running the example (build_and_run.sh)
+##### Bash code for building and running the example application (build_and_run.sh)
 ```bash
 echo "Clean..."
-rm ./Ws...
+rm ./WsGeneratePNR
 echo "Build..."
-go build -o Ws... main.go 
-echo "Build Done..."
+go build -o WsGeneratePNR main.go 
+echo "Build Done."
 echo "Run..."
-./Ws... > Ws...-Result.xml
+./WsGeneratePNR > WsGeneratePNR-Result.xml
 echo "Done."
 
 ```

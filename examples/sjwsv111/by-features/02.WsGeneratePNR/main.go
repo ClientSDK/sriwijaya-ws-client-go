@@ -38,7 +38,57 @@ func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 		`
 			<Username xsi:type="xsd:string">SRIWIJAWA_AGENT_USERNAME</Username>
 			<Password xsi:type="xsd:string">SRIWIJAWA_AGENT_PASSWORD</Password>
-			...To Do...
+			<Received xsi:type="xsd:string">Angkasa Sriwijaya</Received>
+			<ReceivedPhone xsi:type="xsd:string">081234987650</ReceivedPhone>
+			<Email xsi:type="xsd:string">angkasa.sriwijaya@gmail.com</Email>
+			<SearchKey xsi:type="xsd:string">SEARCH_KEY_FROM_WS_SEARCH_FLIGHT_RESPONSE</SearchKey>
+			<ExtraCoverAddOns xsi:type="xsd:string">NO</ExtraCoverAddOns>
+			<AdultNames xsi:type="urn:AdultNamesArray" soapenc:arrayType="urn:InputReqNameArray[1]">
+				<item xsi:type="urn:InputReqNameArray">
+					<FirstName xsi:type="xsd:string">Angkasa</FirstName>
+					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
+					<Suffix xsi:type="xsd:string">MR</Suffix>
+				</item>
+			</AdultNames>
+			<ChildNames xsi:type="urn:ChildNamesArray" soapenc:arrayType="urn:InputReqNameArray[1]">
+				<item xsi:type="urn:InputReqNameArray">
+					<FirstName xsi:type="xsd:string">Mas</FirstName>
+					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
+					<Suffix xsi:type="xsd:string">MSTR</Suffix>
+					<Dob xsi:type="xsd:string">2010-10-10</Dob>
+				</item>
+			</ChildNames>
+			<InfantNames xsi:type="urn:InfantNamesArray" soapenc:arrayType="urn:InputReqArrayInf[1]">
+				<item xsi:type="urn:InputReqArrayInf">
+					<FirstName xsi:type="xsd:string">Ananda</FirstName>
+					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
+					<Suffix xsi:type="xsd:string">INF</Suffix>
+					<Dob xsi:type="xsd:string">2017-07-17</Dob>
+					<AdultRefference xsi:type="xsd:string">1</AdultRefference>
+				</item>
+			</InfantNames>
+			<Keys xsi:type="urn:InputReqArrayKey" soapenc:arrayType="urn:InputReqArrayKeys[5]">
+				<item xsi:type="urn:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_01</Key>
+					<Category xsi:type="xsd:string">Departure</Category>
+				</item>
+				<item xsi:type="urn:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_02_IF_CONNECTING</Key>
+					<Category xsi:type="xsd:string">Departure</Category>
+				</item>
+				<item xsi:type="urn:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_03_IF_CONNECTING</Key>
+					<Category xsi:type="xsd:string">Departure</Category>
+				</item>
+				<item xsi:type="tns:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_01_IF_ROUNTRIP</Key>
+					<Category xsi:type="xsd:string">Return</Category>
+				</item>
+				<item xsi:type="tns:InputReqArrayKeys">
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_02_IF_ROUNTRIP_CONNECTING</Key>
+					<Category xsi:type="xsd:string">Return</Category>
+				</item>
+			</Keys>
 			`)
 	wsResp, errC := s.CallWsGeneratePNR(params, false)
 

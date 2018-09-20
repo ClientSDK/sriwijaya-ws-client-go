@@ -126,7 +126,7 @@ func callWsSearchFlight(s *sjwsdk111.SoapSJClient) {
 
 ```
 
-##### Bash code for build and running the example (build_and_run.sh)
+##### Bash code for building and running the example application (build_and_run.sh)
 ```bash
 echo "Clean..."
 rm ./WsSearchFlight
