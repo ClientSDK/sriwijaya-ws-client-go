@@ -38,7 +38,8 @@ func callWsAccountStatement(s *sjwsdk111.SoapSJClient) {
 		`
 			<Username xsi:type="xsd:string">SRIWIJAWA_AGENT_USERNAME</Username>
 			<Password xsi:type="xsd:string">SRIWIJAWA_AGENT_PASSWORD</Password>
-			...To Do...
+			<PeriodeStart xsi:type="xsd:string">18-Sep-18</PeriodeStart>
+            <PeriodeEnd xsi:type="xsd:string">18-Sep-18</PeriodeEnd>
 			`)
 	wsResp, errC := s.CallWsAccountStatement(params, false)
 
