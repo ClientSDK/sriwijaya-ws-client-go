@@ -1,0 +1,8 @@
+ <WsCreditBalanceResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <CreditBalance>20188102</CreditBalance>
+     <ErrorCode>CR_BALANCE0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsCreditBalanceResponse>

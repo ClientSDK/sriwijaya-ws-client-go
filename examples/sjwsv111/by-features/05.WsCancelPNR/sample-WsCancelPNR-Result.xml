@@ -1,0 +1,8 @@
+ <WsCancelPNRResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <BookingCode>ABMNYZ</BookingCode>
+     <ErrorCode>CANCEL0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsCancelPNRResponse>

@@ -142,3 +142,44 @@ You can build and running by execute the "build_and_run.sh" bash files.
 ```
 
 After the application is running, you will get the xml response in `WsAccountStatement-Result.xml` files.
+
+## Sample Response
+
+```xml
+ <WsAccountStatementResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <AccountStatementDetail>
+       <item>
+         <DateCreate>18 Sep 2018 08:08 (GMT+7)</DateCreate>
+         <UserCreate>SRIWIJAWA_AGENT_USERNAME</UserCreate>
+         <Description>Ticketing for ABMNYZ</Description>
+         <Amount>1000000</Amount>
+         <BalanceStatus>D</BalanceStatus>
+         <LastBalance>1020188102</LastBalance>
+         <Currency>IDR</Currency>
+       </item>
+       <item>
+         <DateCreate>18 Sep 2018 08:08 (GMT+7)</DateCreate>
+         <UserCreate>SRIWIJAWA_AGENT_USERNAME</UserCreate>
+         <Description>Agent Commision for ABMNYZ</Description>
+         <Amount>30000</Amount>
+         <BalanceStatus>C</BalanceStatus>
+         <LastBalance>1020218102</LastBalance>
+         <Currency>IDR</Currency>
+       </item>
+       <item>
+         <DateCreate>18 Sep 2018 08:08 (GMT+7)</DateCreate>
+         <UserCreate>SRIWIJAWA_AGENT_USERNAME</UserCreate>
+         <Description>Incentive for ABMNYZ</Description>
+         <Amount>10000</Amount>
+         <BalanceStatus>C</BalanceStatus>
+         <LastBalance>1020228102</LastBalance>
+         <Currency>IDR</Currency>
+       </item>
+     </AccountStatementDetail>
+     <ErrorCode>ACC_STMT0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsAccountStatementResponse>
+```

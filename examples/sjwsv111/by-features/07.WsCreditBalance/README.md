@@ -141,3 +141,16 @@ You can build and running by execute the "build_and_run.sh" bash files.
 ```
 
 After the application is running, you will get the xml response in `WsCreditBalance-Result.xml` files.
+
+## Sample Response
+
+```xml
+ <WsCreditBalanceResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <CreditBalance>20188102</CreditBalance>
+     <ErrorCode>CR_BALANCE0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsCreditBalanceResponse>
+```

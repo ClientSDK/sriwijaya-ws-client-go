@@ -141,3 +141,16 @@ You can build and running by execute the "build_and_run.sh" bash files.
 ```
 
 After the application is running, you will get the xml response in `WsCancelPNR-Result.xml` files.
+
+## Sample Response
+
+```xml
+ <WsCancelPNRResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <BookingCode>ABMNYZ</BookingCode>
+     <ErrorCode>CANCEL0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsCancelPNRResponse>
+```

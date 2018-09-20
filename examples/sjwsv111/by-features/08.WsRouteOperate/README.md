@@ -140,3 +140,43 @@ You can build and running by execute the "build_and_run.sh" bash files.
 ```
 
 After the application is running, you will get the xml response in `WsRouteOperate-Result.xml` files.
+
+## Sample Response
+
+```xml
+ <WsRouteOperateResponse>
+   <return>
+     <Username>SRIWIJAWA_AGENT_USERNAME</Username>
+     <RouteOperates>
+       <item>
+         <CityFrom>JOG</CityFrom>
+         <CityFromName>Yogyakarta</CityFromName>
+         <CityFromCountry>Indonesia</CityFromCountry>
+         <ApoNameFrom>Adi Sucipto</ApoNameFrom>
+         <TimeZoneFrom>7</TimeZoneFrom>
+         <CityTo>CGK</CityTo>
+         <CityToName>Jakarta</CityToName>
+         <CityToCountry>Indonesia</CityToCountry>
+         <ApoNameTo>Soekarno Hatta International Airport</ApoNameTo>
+         <TimeZoneTo>7</TimeZoneTo>
+         <StatusRoute>D</StatusRoute>
+       </item>
+       <item>
+         <CityFrom>PEN</CityFrom>
+         <CityFromName>Penang</CityFromName>
+         <CityFromCountry>Malaysia</CityFromCountry>
+         <ApoNameFrom>Penang International Airport</ApoNameFrom>
+         <TimeZoneFrom>8</TimeZoneFrom>
+         <CityTo>KNO</CityTo>
+         <CityToName>Medan</CityToName>
+         <CityToCountry>Indonesia</CityToCountry>
+         <ApoNameTo>Kualanamu </ApoNameTo>
+         <TimeZoneTo>7</TimeZoneTo>
+         <StatusRoute>I</StatusRoute>
+       </item>
+     </RouteOperates>
+     <ErrorCode>ROPERATE0000</ErrorCode>
+     <ErrorMessage>Success.</ErrorMessage>
+   </return>
+ </WsRouteOperateResponse>
+```
