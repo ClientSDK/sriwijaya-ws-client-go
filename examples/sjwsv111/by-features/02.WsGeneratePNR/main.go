@@ -69,23 +69,23 @@ func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 			</InfantNames>
 			<Keys xsi:type="urn:InputReqArrayKey" soapenc:arrayType="urn:InputReqArrayKeys[5]">
 				<item xsi:type="urn:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_01</Key>
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_01:T:S</Key>
 					<Category xsi:type="xsd:string">Departure</Category>
 				</item>
 				<item xsi:type="urn:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_02_IF_CONNECTING</Key>
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_02_IF_CONNECTING:T:S</Key>
 					<Category xsi:type="xsd:string">Departure</Category>
 				</item>
 				<item xsi:type="urn:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_03_IF_CONNECTING</Key>
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_03_IF_CONNECTING:T:S</Key>
 					<Category xsi:type="xsd:string">Departure</Category>
 				</item>
 				<item xsi:type="tns:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_01_IF_ROUNTRIP</Key>
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_01_IF_ROUNTRIP:Q:S</Key>
 					<Category xsi:type="xsd:string">Return</Category>
 				</item>
 				<item xsi:type="tns:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_02_IF_ROUNTRIP_CONNECTING</Key>
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_02_IF_ROUNTRIP_CONNECTING:Q:S</Key>
 					<Category xsi:type="xsd:string">Return</Category>
 				</item>
 			</Keys>
