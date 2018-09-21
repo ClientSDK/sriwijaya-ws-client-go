@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for issuing PNR/Booking Code by using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the issuing PNR/Booking Code use case.
 
-![Issuing PNR/Booking Code Diagram](images/03.WsIssuing.png "Issuing PNR/Booking Code Diagram")
+![Issuing PNR/Booking Code Diagram](images/03.WsIssuing-1.png "Issuing PNR/Booking Code Diagram")
 
 
 ## Prerequisites

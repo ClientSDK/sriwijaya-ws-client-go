@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for online search flight schedule using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the Search Flight use case.
 
-![Search Flight Diagram](images/01.WsSearchFlight.png "Search Flight Diagram")
+![Search Flight Diagram](images/01.WsSearchFlight-1.png "Search Flight Diagram")
 
 
 ## Prerequisites

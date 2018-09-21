@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for canceling PNR/Booking using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the cancel PNR use case.
 
-![Cancel PNR Diagram](images/05.WsCancelPNR.png "Cancel PNR Diagram")
+![Cancel PNR Diagram](images/05.WsCancelPNR-1.png "Cancel PNR Diagram")
 
 
 ## Prerequisites

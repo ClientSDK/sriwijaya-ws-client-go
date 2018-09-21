@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for retrieving account statement information using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the account statement use case.
 
-![Account Statement Diagram](images/06.WsAccountStatement.png "Account Statement Diagram")
+![Account Statement Diagram](images/06.WsAccountStatement-1.png "Account Statement Diagram")
 
 
 ## Prerequisites

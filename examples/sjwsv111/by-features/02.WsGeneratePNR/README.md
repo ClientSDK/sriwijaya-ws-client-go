@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for make a booking (PNR) by using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the booking use case.
 
-![Generate PNR/Booking Diagram](images/02.WsGeneratePNR.png "Generate PNR/Booking Diagram")
+![Generate PNR/Booking Diagram](images/02.WsGeneratePNR-1.png "Generate PNR/Booking Diagram")
 
 
 ## Prerequisites

@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for retreiving PNR information by using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the retrieve PNR use case.
 
-![Retrieve PNR Diagram](images/04.WsRetrievePNR.png "Retrieve PNR Diagram")
+![Retrieve PNR Diagram](images/04.WsRetrievePNR-1.png "Retrieve PNR Diagram")
 
 
 ## Prerequisites
