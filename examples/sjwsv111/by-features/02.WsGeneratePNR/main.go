@@ -47,7 +47,7 @@ func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 				<item xsi:type="urn:InputReqNameArray">
 					<FirstName xsi:type="xsd:string">Angkasa</FirstName>
 					<LastName xsi:type="xsd:string">Sriwijaya</LastName>
-					<Suffix xsi:type="xsd:string">MR</Suffix>
+					<Suffix xsi:type="xsd:string">MRS</Suffix>
 				</item>
 			</AdultNames>
 			<ChildNames xsi:type="urn:ChildNamesArray" soapenc:arrayType="urn:InputReqNameArray[1]">

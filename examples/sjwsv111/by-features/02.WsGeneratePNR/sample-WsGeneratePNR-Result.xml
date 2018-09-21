@@ -1,4 +1,4 @@
- <WsRetrievePNRResponse>
+ <WsGeneratePNRResponse>
    <return>
      <Username>SRIWIJAWA_AGENT_USERNAME</Username>
      <BookingCode>ABMNYZ</BookingCode>
@@ -6,21 +6,21 @@
        <ReservationDetails>
          <BookingCode>ABMNYZ</BookingCode>
          <BookingDate>18 Sep 2018 08:01 (GMT+7)</BookingDate>
-         <BalanceDue>0</BalanceDue>
+         <BalanceDue>2025000</BalanceDue>
          <BalanceDueRemarks>*Extra Cover Insurance (STI) not include in balance due.</BalanceDueRemarks>
          <CurrencyCode>IDR</CurrencyCode>
-         <Time>18 Sep 2018 18:18 (GMT+7)</Time>
-         <TimeDescription>DateOfIssue</TimeDescription>
-         <Status>Confirm</Status>
+         <Time>18 Sep 2018 14:14 (GMT+7)</Time>
+         <TimeDescription>TimeLimit</TimeDescription>
+         <Status>Hold</Status>
        </ReservationDetails>
        <PassengerDetails>
          <item>
            <No>1</No>
-           <Suffix>Mr</Suffix>
+           <Suffix>Mrs</Suffix>
            <FirstName>ANGKASA</FirstName>
            <LastName>SRIWIJAYA</LastName>
            <SeatQty>1</SeatQty>
-           <TicketNumber>977012345678901C1, C2</TicketNumber>
+           <TicketNumber>N/A</TicketNumber>
            <SpecialRequest>N/A</SpecialRequest>
          </item>
          <item>
@@ -29,7 +29,7 @@
            <FirstName>MAS</FirstName>
            <LastName>SRIWIJAYA</LastName>
            <SeatQty>1</SeatQty>
-           <TicketNumber>977012345678902C1, C2</TicketNumber>
+           <TicketNumber>N/A</TicketNumber>
            <SpecialRequest>N/A</SpecialRequest>
          </item>
          <item>
@@ -38,7 +38,7 @@
            <FirstName>ANANDA</FirstName>
            <LastName>SRIWIJAYA</LastName>
            <SeatQty>0</SeatQty>
-           <TicketNumber>977012345678903C1, C2</TicketNumber>
+           <TicketNumber>N/X</TicketNumber>
            <SpecialRequest>N/A</SpecialRequest>
          </item>
        </PassengerDetails>
@@ -107,25 +107,12 @@
        </ContactList>
        <AgentDetails>
          <BookedBy>SRIWIJAWA_AGENT_USERNAME</BookedBy>
-         <IssuedBy>SRIWIJAWA_AGENT_USERNAME</IssuedBy>
+         <IssuedBy>-</IssuedBy>
        </AgentDetails>
-       <BookingRemarks>
-        <item>
-           <CommentText>rc pleasee core gender pax1 (MRS ANGKASA) to (MR ANGKASA)-tq</CommentText>
-           <CreatedBy>SRIWIJAWA_CS_USERNAME</CreatedBy>
-           <CreatedDate>18 Sep 2018 18:28 (GMT+7)</CreatedDate>
-           <IpAddress>10.10.10.10</IpAddress>
-         </item>
-         <item>
-           <CommentText>rqst erman cc as rmk</CommentText>
-           <CreatedBy>SRIWIJAWA_CS_USERNAME</CreatedBy>
-           <CreatedDate>18 Sep 2018 18:48 (GMT+7)</CreatedDate>
-           <IpAddress>10.10.10.11</IpAddress>
-         </item>
-       </BookingRemarks>
+       <BookingRemarks></BookingRemarks>
        <AdditionalInformation></AdditionalInformation>
      </YourItineraryDetails>
      <ErrorCode>RETRIEVE0000</ErrorCode>
      <ErrorMessage>Success.</ErrorMessage>
    </return>
- </WsRetrievePNRResponse>
+ </WsGeneratePNRResponse>

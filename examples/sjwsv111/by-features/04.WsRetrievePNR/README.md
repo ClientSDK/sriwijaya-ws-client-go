@@ -163,7 +163,7 @@ After the application is running, you will get the xml response in `WsRetrievePN
        <PassengerDetails>
          <item>
            <No>1</No>
-           <Suffix>Mrs</Suffix>
+           <Suffix>Mr</Suffix>
            <FirstName>ANGKASA</FirstName>
            <LastName>SRIWIJAYA</LastName>
            <SeatQty>1</SeatQty>
