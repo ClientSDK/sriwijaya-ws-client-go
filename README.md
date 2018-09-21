@@ -70,18 +70,13 @@ go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
     │       ├── by-scenario
     │       │   ├── Domestic
     │       │   │   ├── 1.1.OneWayDirect-1.0.0
-    │       │   │   ├── 1.2.OneWayDirect-1.1.0
-    │       │   │   ├── 1.3.OneWayDirect-1.1.1
-    │       │   │   ├── 2.1.OneWayConnecting-1.0.0
-    │       │   │   ├── 2.1.OneWayConnecting-1.1.0
-    │       │   │   ├── 2.1.OneWayConnecting-1.1.1
-    │       │   │   ├── 3.1.RoundTripDirect-1.0.0
-    │       │   │   ├── 3.2.RoundTripDirect-1.1.0
-    │       │   │   ├── 3.3.RoundTripDirect-1.1.1
-    │       │   │   ├── 4.1.RoundTripConnecting-1.0.0
-    │       │   │   ├── 4.2.RoundTripConnecting-1.1.0
+    │       │   │   ├── ...
     │       │   │   └── 4.3.RoundTripConnecting-1.1.1
     │       │   └── International
+    │       │   │   ├── 1.1.OneWayDirect-1.0.0
+    │       │   │   ├── ...
+    │       │   │   └── 4.3.RoundTripConnecting-1.1.1
+    │       │   └── README.md
     │       └── wsdl
     │           ├── wsp-wsdl.eticketv111.wsdl
     │           └── wsx-wsdl.eticketv111.wsdl
