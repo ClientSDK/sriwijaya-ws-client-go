@@ -47,7 +47,7 @@ go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
 
 ##### Sriwijaya Air Webservice Version 111
 - [Examples By Features](examples/sjwsv111/by-features/README.md)
-- [Examples By Scenarios-Work In Progress]
+- [Examples By Scenarios]
 
 ### Repository Structure
 ```
