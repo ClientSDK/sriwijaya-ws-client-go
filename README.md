@@ -38,6 +38,7 @@ $ git clone https://github.com/ClientSDK/sriwijaya-ws-client-go.git
 $ mkdir -p $GOPATH/github.com/ClientSDK
 $ cd $GOPATH/github.com/ClientSDK
 $ git clone https://github.com/ClientSDK/sriwijaya-ws-client-go.git
+
 ```
 
 - A Text Editor or an IDE
@@ -52,7 +53,7 @@ $ git clone https://github.com/ClientSDK/sriwijaya-ws-client-go.git
 
 ##### Sriwijaya Air Webservice Version 111
 - [Examples By Features](examples/sjwsv111/by-features/README.md)
-- [Examples By Scenarios]
+- [Examples By Scenarios-Work In Progress]
 
 ### Repository Structure
 ```
