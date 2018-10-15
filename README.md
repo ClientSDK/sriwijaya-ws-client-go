@@ -24,10 +24,7 @@
 ##### Sriwijaya Air Webservice Version 111
 
 ```bash
-$ mkdir -p $GOPATH/github.com/ClientSDK
-$ cd $GOPATH/github.com/ClientSDK
-$ git clone https://github.com/ClientSDK/sriwijaya-ws-client-go.git
-
+go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
 ```
 
 ## Prerequisites
@@ -35,10 +32,7 @@ $ git clone https://github.com/ClientSDK/sriwijaya-ws-client-go.git
 - [Sriwijaya Air Web Service (SOAP) Client for Go (sjwsdk111 GoLang package) ](https://github.com/ClientSDK/sriwijaya-ws-client-go)
 
 ```Go
-$ mkdir -p $GOPATH/github.com/ClientSDK
-$ cd $GOPATH/github.com/ClientSDK
-$ git clone https://github.com/ClientSDK/sriwijaya-ws-client-go.git
-
+go get github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111
 ```
 
 - A Text Editor or an IDE
