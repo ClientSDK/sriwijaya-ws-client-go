@@ -4,9 +4,6 @@
 
 // Author: ClientSDK Team (muharihar)
 
-// Package sjwsdk111 is an UnOfficial SOAP client SDK for Sriwijaya Air Web Services (SOAP)
-// Adopted from: https://github.com/tiaguinho/gosoap/blob/master/soap.go
-// Modified to Sriwijawa Air SOAP showcase
 package sjwsdk111
 
 import (
@@ -43,9 +40,9 @@ func NewSoapSJClient(httpClient *http.Client, wsdlLocation string, locationType 
 	svcAddrLocation = strings.Replace(svcAddrLocation, "http://", "https://", -1)
 
 	sjClient := &SoapSJClient{
-		clientHTTP: httpClient,
-		WSDL:       wsdlLocation,
-		URL:        "urn:sj_service",
+		clientHTTP:             httpClient,
+		WSDL:                   wsdlLocation,
+		URL:                    "urn:sj_service",
 		ServiceAddressLocation: svcAddrLocation,
 		Definitions:            wsdlDef,
 		userAgent:              userAgent,

@@ -4,9 +4,6 @@
 
 // Author: ClientSDK Team (muharihar)
 
-// Package sjwsdk111 is an UnOfficial SOAP client SDK for Sriwijaya Air Web Services (SOAP)
-// Adopted from : https://github.com/tiaguinho/gosoap/blob/master/encode.go
-// Modified to Sriwijawa SOAP showcase
 package sjwsdk111
 
 import (

@@ -4,8 +4,6 @@
 
 // Author: ClientSDK Team (muharihar)
 
-// Package sjwsdk111 is an UnOfficial SOAP client SDK for Sriwijaya Air Web Services (SOAP)
-// WSDL Version:  https://wsp.sriwijayaair.co.id:11443/wsdl.eticketv111/index.php?wsdl
 package sjwsdk111
 
 import "encoding/xml"
