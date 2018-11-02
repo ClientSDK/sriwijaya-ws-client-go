@@ -168,7 +168,7 @@ type soapAddress struct {
 
 // getWsdlDefinitions sent request to the wsdl location (URL location or File location) and set definitions on struct
 // URL location must accessible without proxy.
-// File location is recomended for faster response.
+// File location is recommended for faster response.
 func getWsdlDefinitions(wsdlLocation string, locationType string) (wsdl *wsdlDefinitions, err error) {
 
 	reader, err := getWsdlContent(wsdlLocation, locationType)
