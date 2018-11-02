@@ -14,7 +14,6 @@ import (
 	"net/http"
 	"net/http/httputil"
 	"strings"
-	"sync"
 
 	"golang.org/x/net/html/charset"
 )
@@ -57,7 +56,7 @@ type HeaderParams map[string]string
 // SoapSJClient struct hold all the informations about WSDL,
 // request and response of the server
 type SoapSJClient struct {
-	clientMu   sync.Mutex   // clientMu protects the client during calls that modify the CheckRedirect func.
+	// clientMu   sync.Mutex   // clientMu protects the client during calls that modify the CheckRedirect func.
 	clientHTTP *http.Client // HTTP client used to communicate with the API.
 
 	WSDL                   string
