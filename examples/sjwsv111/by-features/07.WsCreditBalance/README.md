@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for retrieving credit balance information using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the credit balance use case.
 
-![Credit Balance Diagram](images/07.WsCreditBalance-1.png "Credit Balance Diagram")
+![Credit Balance Diagram](images/07.WsCreditBalance-2.png "Credit Balance Diagram")
 
 
 ## Prerequisites

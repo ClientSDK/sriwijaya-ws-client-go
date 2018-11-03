@@ -14,7 +14,7 @@ The following are the sections available in this guide.
 ## What you’ll build
 Let’s make a real world simple application for retrieving route information using Sriwijaya Air Web Services Endpoint. Following diagram demonstrates the route operate use case.
 
-![Route Operate Diagram](images/08.WsRouteOperate-1.png "Route Operate Diagram")
+![Route Operate Diagram](images/08.WsRouteOperate-2.png "Route Operate Diagram")
 
 
 ## Prerequisites
