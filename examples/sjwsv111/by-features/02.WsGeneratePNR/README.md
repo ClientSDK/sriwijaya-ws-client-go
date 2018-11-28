@@ -65,6 +65,7 @@ Let's make a simple application for make a booking by using `sjwsdk111` package.
 package main
 
 import (
+	"crypto/tls"
 	"encoding/xml"
 	"fmt"
 	"net/http"
@@ -73,21 +74,39 @@ import (
 	"github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111"
 )
 
-func main() {
-
+func makeHTTPClient() *http.Client {
 	// Access via proxy if needed
 	proxyURL, _ := url.Parse("http://proxy-ip-address:proxy-port")
 	//proxyURL, _ := url.Parse("http://proxy-user:proxy-password@proxy-ip-address:proxy-port")
 
-	// Initiate http client with transport
-	httpClient := &http.Client{Transport: &http.Transport{Proxy: http.ProxyURL(proxyURL)}}
-    
+	// Initite transport with proxy and skip TLS (if needed)
+	tr := &http.Transport{
+		Proxy:           http.ProxyURL(proxyURL),
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+
+	// Initiate transport without proxy and skip TLS (if needed)
+	// tr := &http.Transport{
+	// 	TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	// }
+
+	httpClient := &http.Client{Transport: tr}
+
+	return httpClient
+}
+
+func main() {
+
+	// Initiate http client
+	httpClient := makeHTTPClient()
+
 	// Initiate NewSoapSJClient version 111
 	sjClient, err := sjwsdk111.NewSoapSJClient(httpClient, "../../wsdl/wsp-wsdl.eticketv111.wsdl", "file")
 	if err != nil {
 		fmt.Println(err)
 	}
 
+	// call Sriwijaya web service operation
 	callWsGeneratePNR(sjClient)
 }
 
@@ -128,23 +147,23 @@ func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 			</InfantNames>
 			<Keys xsi:type="urn:InputReqArrayKey" soapenc:arrayType="urn:InputReqArrayKeys[5]">
 				<item xsi:type="urn:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_01</Key>
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_01:T:S</Key>
 					<Category xsi:type="xsd:string">Departure</Category>
 				</item>
 				<item xsi:type="urn:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_02_IF_CONNECTING</Key>
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_02_IF_CONNECTING:T:S</Key>
 					<Category xsi:type="xsd:string">Departure</Category>
 				</item>
 				<item xsi:type="urn:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_03_IF_CONNECTING</Key>
+					<Key xsi:type="xsd:string">SELECTED_DEPARTURE_SEGMENT_CLASS_KEY_03_IF_CONNECTING:T:S</Key>
 					<Category xsi:type="xsd:string">Departure</Category>
 				</item>
 				<item xsi:type="tns:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_01_IF_ROUNDTRIP</Key>
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_01_IF_ROUNTRIP:Q:S</Key>
 					<Category xsi:type="xsd:string">Return</Category>
 				</item>
 				<item xsi:type="tns:InputReqArrayKeys">
-					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_02_IF_ROUNDTRIP_CONNECTING</Key>
+					<Key xsi:type="xsd:string">SELECTED_RETURN_SEGMENT_CLASS_KEY_02_IF_ROUNTRIP_CONNECTING:Q:S</Key>
 					<Category xsi:type="xsd:string">Return</Category>
 				</item>
 			</Keys>
@@ -160,7 +179,7 @@ func callWsGeneratePNR(s *sjwsdk111.SoapSJClient) {
 	// fmt.Println()
 	// fmt.Println("ReturnData-WsGeneratePNR:")
 	// fmt.Printf("%#v\n", wsResp.Return)
-    
+
 	// Marshal response variable to XML
 	myXML, _ := xml.MarshalIndent(wsResp, " ", "  ")
 	fmt.Println(string(myXML))
