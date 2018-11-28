@@ -62,11 +62,6 @@ Let's make a simple application for issuing PNR/Booking Code by using `sjwsdk111
 
 ##### Main code for WsIssuing (main.go)
 ```go
-// Copyright 2018 The ClientSDK Team Authors. All rights reserved.
-// Use of this source code is governed by a Apache 2.0-style
-// license that can be found in the LICENSE file.
-
-// Author: ClientSDK Team (muharihar)
 package main
 
 import (
