@@ -65,6 +65,7 @@ Let's make a simple application for retrieving route information using `sjwsdk11
 package main
 
 import (
+	"crypto/tls"
 	"encoding/xml"
 	"fmt"
 	"net/http"
@@ -73,21 +74,39 @@ import (
 	"github.com/ClientSDK/sriwijaya-ws-client-go/sjwsdk111"
 )
 
-func main() {
-
+func makeHTTPClient() *http.Client {
 	// Access via proxy if needed
 	proxyURL, _ := url.Parse("http://proxy-ip-address:proxy-port")
 	//proxyURL, _ := url.Parse("http://proxy-user:proxy-password@proxy-ip-address:proxy-port")
 
-	// Initiate http client with transport
-	httpClient := &http.Client{Transport: &http.Transport{Proxy: http.ProxyURL(proxyURL)}}
-    
+	// Initite transport with proxy and skip TLS (if needed)
+	tr := &http.Transport{
+		Proxy:           http.ProxyURL(proxyURL),
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	}
+
+	// Initiate transport without proxy and skip TLS (if needed)
+	// tr := &http.Transport{
+	// 	TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
+	// }
+
+	httpClient := &http.Client{Transport: tr}
+
+	return httpClient
+}
+
+func main() {
+
+	// Initiate http client
+	httpClient := makeHTTPClient()
+
 	// Initiate NewSoapSJClient version 111
 	sjClient, err := sjwsdk111.NewSoapSJClient(httpClient, "../../wsdl/wsp-wsdl.eticketv111.wsdl", "file")
 	if err != nil {
 		fmt.Println(err)
 	}
 
+	// call Sriwijaya web service operation
 	callWsRouteOperate(sjClient)
 }
 
@@ -109,7 +128,7 @@ func callWsRouteOperate(s *sjwsdk111.SoapSJClient) {
 	// fmt.Println()
 	// fmt.Println("ReturnData-WsRouteOperate:")
 	// fmt.Printf("%#v\n", wsResp.Return)
-    
+
 	// Marshal response variable to XML
 	myXML, _ := xml.MarshalIndent(wsResp, " ", "  ")
 	fmt.Println(string(myXML))
